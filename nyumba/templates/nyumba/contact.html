@@ -1,0 +1,99 @@
+{% extends 'nyumba/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section spad set-bg" data-setbg="{% static 'nyuma/img/breadcrumb-contact-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h4>Contact Us</h4>
+                        <div class="bt-option">
+                            <a href="/"><i class="fa fa-home"></i> Home</a>
+                            <span>Contact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Contact Form Section Begin -->
+    <section class="contact-form-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cf-content">
+                        <div class="cc-title">
+                            <h4>Contact form</h4>
+                            <p>Unaweza acha swali au mahoni yako kupitia form apo chini nasi tuta kujibu haraka iwezekanavo
+                            Asante.</p>
+                        </div>
+                        <form action="" method="POST" class="cc-form">
+                            {% csrf_token %}
+                            <div class="group-input">
+                                <input type="text" placeholder="Name (jina)" name="jina">
+                                <input type="text" placeholder="Phone (namba ya simu)" name="phone">
+                            </div>
+                            <textarea placeholder="Comment (mahoni)" name="maoni"></textarea>
+                            <button type="submit" class="site-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section End -->
+
+    <!-- Contact Section Begin -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ci-text">
+                                <h5>Address</h5>
+                                <p>Tanzania, Mwanza </p>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <div class="ci-text">
+                                <h5>Phone</h5>
+                                <ul>
+                                    <li>+255756304302</li>
+                                    <li>+255713308668</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-headphones"></i>
+                            </div>
+                            <div class="ci-text">
+                                <h5>Support</h5>
+                                <p>originstonytz@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Contact Section End -->
+
+
+
+
+{% endblock content %}

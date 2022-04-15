@@ -1,0 +1,128 @@
+{% extends 'nyumba/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hs-slider owl-carousel">
+                {% for slide in object_list %}
+                <div class="hs-item set-bg" data-setbg="{{ slide.picha.url }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+     <!-- Chooseus Section Begin -->
+    <section class="chooseus-section spad set-bg" data-setbg="{% static 'nyuma/img/chooseus/chooseus-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="chooseus-text">
+                        <div class="section-title">
+                            <h4>kwanini utuchague</h4>
+                        </div>
+                        <p>Tunafanya ujenzi wa nyumba na tenki za choo kwa bei nafuu kabisa, tuna oa uduma ya kubandika mawe ya ndani na
+                            kuku letea kwa wale wanaohiaji uduma hio kwa bei nafuu kabisa .</p>
+                    </div>
+                    <div class="chooseus-features">
+                        <div class="cf-item">
+                            <div class="cf-pic">
+                                <img src="{% static 'nyuma/img/chooseus/chooseus-icon-1.png' %}" alt="">
+                            </div>
+                            <div class="cf-text">
+                                <h5>Kujenga nyumba ya ndoto yako</h5>
+                                <p>Tuna jenga nyumba ya ndoto yako kwa mda ulio tupangia.</p>
+                            </div>
+                        </div>
+                        <div class="cf-item">
+                            <div class="cf-pic">
+                                <img src="{% static 'nyuma/img/chooseus/chooseus-icon-2.png' %}" alt="">
+                            </div>
+                            <div class="cf-text">
+                                <h5>kuchora ramani</h5>
+                                <p>Tunachora ramani za nyumba kwa ubora na uzoefu wa mda mlefu sana </p>
+                            </div>
+                        </div>
+                        <div class="cf-item">
+                            <div class="cf-pic">
+                                <img src="{% static 'nyuma/img/chooseus/chooseus-icon-3.png' %}" alt="">
+                            </div>
+                            <div class="cf-text">
+                                <h5>Mafundi walio wazoefu</h5>
+                                <p>Tuna mafundi walio wazoefu kwenye tasinia za ujenzi katika nyanja mbalimbali</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chooseus Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h4>What our client says?</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row testimonial-slider owl-carousel">
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">
+                            <p>nifurah sana bahada ya kujengewa nyumba imala .</p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="{% static 'nyuma/img/testimonial-author/ta-1.jpg' %}" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Juma ally</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">
+                            <p>Nimependa kufana kazi nanyie .</p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="{% static 'nyuma/img/testimonial-author/ta-2.jpg' %}" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Pendo Edwini</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">
+                            <p>napenda kampuni yenu inatoa uduma bora.</p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="{% static 'nyuma/img/testimonial-author/ta-1.jpg' %}" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Rashid juma</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+{% endblock content %}

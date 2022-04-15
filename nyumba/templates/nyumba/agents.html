@@ -1,0 +1,59 @@
+{% extends 'nyumba/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section spad set-bg" data-setbg="{% static 'nyuma/img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h4>Our Agents</h4>
+                        <div class="bt-option">
+                            <a href="/"><i class="fa fa-home"></i> Home</a>
+                            <span>Our Agents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Agent Section Begin -->
+    <section class="agent-section spad">
+        <div class="container">
+
+            <div class="as-slider owl-carousel">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="as-item">
+                            {% for agent in object_list %}
+                            <div class="as-pic">
+                                <img src="{{ agent.photo.url }}" alt="">
+
+                            </div><br><br><br><br>
+                            <div class="as-text">
+                                <div class="at-title">
+                                    <h6>{{agent.first_name}} {{agent.last_name}}</h6>
+                                </div>
+                                <ul>
+                                    <li>Phone <span>{{agent.phone_number}}</span></li>
+                                </ul>
+                            </div>
+                             {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Agent Section End -->
+
+
+{% endblock content %}
